@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+char s[100];
+fgets(s,100,stdin);
+ strlwr(s);
+
+int len=strlen(s);
+char fre[100];
+int k=0;
+
+for(int i=0;i<len;i++)
+{
+    int c=0;
+ for(int j=0;j<len;j++)
+ {
+   if(s[i]==fre[j]){
+    c++;
+    break;
+   }
+ }
+  if(c==0 && s[i]!='\0')
+  {
+      fre[k++]=s[i];
+  }
+
+
+
+}
+fre[k]='\0';
+
+printf("%s",fre);
+
+
+
+return 0;
+}
+
